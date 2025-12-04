@@ -1,0 +1,786 @@
+<!--server/static/index.html-->
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Email Accounts Manager</title>
+    <style>
+        :root {
+            --c1: #0f766e;
+            --c2: #0891b2;
+            --bg: #f8fafc;
+            --muted: #6b7280;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            margin: 0;
+            background: var(--bg);
+            color: #111;
+        }
+
+        header {
+            background: linear-gradient(90deg, var(--c1), var(--c2));
+            color: #fff;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        header .actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        main {
+            padding: 16px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 12px;
+            width: 750px;
+        }
+        .card_detail {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 12px;
+            width: 400px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: flex-end;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-right: 8px;
+        }
+
+        .field label {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        input[type="text"], input[type="password"], input[type="date"], select, textarea {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 8px 10px;
+            font-size: 14px;
+            background: #fff;
+            outline: none;
+        }
+
+        textarea {
+            min-height: 60px;
+            width: 320px;
+        }
+
+        button {
+            background: #0f766e;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        button.secondary {
+            background: #e5e7eb;
+            color: #111;
+        }
+
+        button.warn {
+            background: #dc2626;
+        }
+
+        button:disabled {
+            opacity: .6;
+            cursor: not-allowed;
+        }
+
+        .xbtn {
+            background: #ef4444;
+            width: 28px;
+            height: 28px;
+            padding: 0;
+            border-radius: 50%;
+            line-height: 28px;
+            text-align: center;
+            font-weight: 900;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 14px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            color: #6b7280;
+            font-weight: 600;
+        }
+
+        .muted {
+            color: #6b7280;
+            font-size: 12px;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 999px;
+            font-size: 12px;
+            background: #f1f5f9;
+        }
+
+        .status-normal {
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+
+        .status-banned {
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+
+        .status-disabled {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 12px;
+        }
+
+        .right {
+            position: sticky;
+            top: 10px;
+            height: max-content;
+        }
+
+        .flex {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .mt {
+            margin-top: 10px;
+        }
+
+        .pagination {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .code {
+            font-family: ui-monospace, Menlo, Consolas, monospace;
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 2px 6px;
+        }
+
+        .link {
+            color: #2563eb;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .warn-text {
+            color: #b91c1c;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .25);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            z-index: 1000;
+        }
+
+        .modal {
+            background: #fff;
+            max-width: 1000px;
+            width: 100%;
+            border-radius: 10px;
+            padding: 14px;
+        }
+
+        .bulk-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            padding: 8px;
+            background: #f8fafc;
+            border: 1px dashed #e5e7eb;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        /* 查看邮件弹窗 */
+        .mails-layout {
+            display: grid;
+            grid-template-columns: 0.5fr 1fr;
+            gap: 12px;
+            min-height: 60vh;
+        }
+
+        .mails-left, .mails-right {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 8px;
+            background: #fff;
+        }
+
+        .mails-left table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .mails-left th, .mails-left td {
+            padding: 8px;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 13px;
+        }
+
+        .mails-toolbar {
+            display: flex;
+            gap: 8px;
+            align-items: flex-end;
+            margin-bottom: 8px;
+        }
+
+        .mails-toolbar .field {
+            margin-right: 0;
+        }
+
+        .mails-preview-head {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4px;
+            margin-bottom: 8px;
+        }
+
+        .mails-subject {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .mails-meta {
+            color: #6b7280;
+            font-size: 12px;
+        }
+
+        .mails-body {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 10px;
+            min-height: 42vh;
+            overflow: auto;
+            background: #fff;
+        }
+
+        .mails-attach {
+            margin-top: 8px;
+        }
+
+        .mails-attach a {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>📧 Email Accounts Manager</h1>
+    <div class="actions">
+        <button id="btn-open-create">新增账号</button>
+    </div>
+</header>
+
+<main>
+    <div class="split">
+        <!-- 左侧：搜索 + 列表 -->
+        <section>
+            <div class="card">
+                <div class="row">
+                    <div class="field">
+                        <label>邮箱包含</label>
+                        <input id="f-email-contains" type="text" placeholder="例如 @gmail.com 或 alice"/>
+                    </div>
+                    <div class="field">
+                        <label>状态</label>
+                        <select id="f-status">
+                            <option value="">--不限--</option>
+                            <option value="未登录">未登录</option>
+                            <option value="登录成功">登录成功</option>
+                            <option value="登录失败">登录失败</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>辅助邮箱（包含）</label>
+                        <input id="f-rec-email" type="text" placeholder="包含任意子串，如 backup@"/>
+                    </div>
+                    <div class="field">
+                        <label>辅助电话（精确）</label>
+                        <input id="f-rec-phone" type="text" placeholder="+86-13800000000"/>
+                    </div>
+                    <div class="field">
+                        <label>备注（包含）</label>
+                        <input id="f-note" type="text" placeholder="按历史 note 检索"/>
+                    </div>
+                    <div class="field">
+                        <label>&nbsp;</label>
+                        <div class="flex">
+                            <button id="btn-search">搜索</button>
+                            <button class="secondary" id="btn-reset">重置</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="flex" style="justify-content:space-between; align-items:center;">
+                    <div class="muted">列表</div>
+                    <div class="pagination">
+                        <button id="btn-export" class="secondary">导出</button>
+                        <button id="btn-prev" class="secondary">上一页</button>
+                        <span id="pg-info" class="muted">第 1/1 页</span>
+                        <button id="btn-next" class="secondary">下一页</button>
+                        <span class="muted">每页</span>
+                        <select id="pg-size">
+                            <option>10</option>
+                            <option selected>20</option>
+                            <option>50</option>
+                            <option>100</option>
+                            <option>500</option>
+                            <option>1000</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 批量操作条 -->
+                <div class="bulk-bar">
+                    <span>已选 <b id="sel-count">0</b> 项</span>
+                    <button id="btn-batch-delete" class="warn" disabled>批量删除</button>
+                    <span class="muted">|</span>
+                    <input id="bulk-note" type="text" placeholder="批量备注（note）" style="min-width:240px;"/>
+                    <input id="bulk-who" type="text" placeholder="操作者（可选）" style="min-width:160px;"/>
+                    <button id="btn-batch-note" disabled>批量修改备注</button>
+                    <span class="muted">提示：仅修改备注且其他字段不变时，后端可能判定“无变更”。</span>
+                </div>
+
+                <div style="overflow:auto;">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" id="chk-all"/></th>
+                            <th>ID</th>
+                            <th>邮箱</th>
+                            <th>时间</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tbl-accounts">
+                        <tr>
+                            <td colspan="6" class="muted">加载中...</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 右侧：详情/编辑 -->
+        <aside class="right">
+            <div class="card_detail" id="panel-detail">
+                <div class="flex" style="justify-content:space-between; align-items:center;">
+                    <h3 style="margin:0; font-size:16px;">详情与编辑</h3>
+                    <button id="btn-refresh-detail" class="secondary">刷新</button>
+                </div>
+                <div id="detail-empty" class="muted">选择左侧列表中的一条记录查看详情。</div>
+                <div id="detail-form" class="hidden">
+                    <div class="muted">ID: <span id="d-id" class="code"></span> | 版本: <span id="d-version"
+                                                                                              class="code"></span></div>
+                    <div class="mt field"><label>邮箱</label><input id="d-email" type="text" disabled/></div>
+                    <div class="mt field"><label>密码</label><input id="d-password" type="text"
+                                                                    placeholder="留空表示不修改"/></div>
+                    <div class="mt field"><label>状态</label>
+                        <select id="d-status">
+                            <option value="未登录">未登录</option>
+                            <option value="登录成功">登录成功</option>
+                            <option value="登录失败">登录失败</option>
+                        </select>
+                    </div>
+                    <div class="mt field"><label>姓名（可选）</label><input id="d-username" type="text"
+                                                                          placeholder="可选"/></div>
+                    <div class="mt field"><label>生日（可选）</label><input id="d-birthday" type="date"
+                                                                          placeholder="YYYY-MM-DD"/></div>
+                    <div class="mt">
+                        <div class="field"><label>辅助邮箱（换行或逗号分隔）</label><textarea id="d-rec-emails"
+                                                                                            placeholder="a@b.com, c@d.com"></textarea>
+                        </div>
+                        <div class="flex muted"><input type="checkbox" id="d-clear-emails"/><label for="d-clear-emails">清空辅助邮箱（会覆盖为空数组）</label>
+                        </div>
+                    </div>
+                    <div class="mt">
+                        <div class="field"><label>辅助电话（换行或逗号分隔）</label><textarea id="d-rec-phones"
+                                                                                            placeholder="+86-138..., +1-202..."></textarea>
+                        </div>
+                        <div class="flex muted"><input type="checkbox" id="d-clear-phones"/><label for="d-clear-phones">清空辅助电话（会覆盖为空数组）</label>
+                        </div>
+                    </div>
+                    <div class="mt">
+                        <div class="field">
+                            <label>别名（换行或逗号、分号分隔；将统一转为小写）</label>
+                            <textarea id="d-aliases" placeholder="alias1, alias2; alias3"></textarea>
+                        </div>
+                        <div class="flex muted">
+                            <input type="checkbox" id="d-clear-aliases"/>
+                            <label for="d-clear-aliases">清空别名（会覆盖为空数组）</label>
+                        </div>
+                    </div>
+                    <div class="row mt">
+                        <div class="field"><label>备注（note）</label><input id="d-note" type="text"
+                                                                           placeholder="如：修改密码/状态调整"/></div>
+                        <div class="field"><label>操作者（created_by）</label><input id="d-who" type="text"
+                                                                                   placeholder="ops/admin"/></div>
+                    </div>
+                    <div class="row mt">
+                        <button id="btn-save">保存更新</button>
+                        <button id="btn-show-history" class="secondary">查看历史</button>
+                        <button id="btn-show-mails" class="secondary">查看邮件</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<!-- 历史弹窗 -->
+<div id="modal-history" class="modal-backdrop">
+    <div class="modal">
+        <div class="flex" style="justify-content:space-between;">
+            <h3 style="margin:0; font-size:16px;">历史版本</h3>
+            <button class="secondary" id="btn-close-history">关闭</button>
+        </div>
+        <div class="muted">账号 ID: <span id="m-accid" class="code"></span></div>
+        <div class="mt" style="max-height:60vh; overflow:auto;">
+            <table>
+                <thead>
+                <tr>
+                    <th>版本</th>
+                    <th>邮箱</th>
+                    <th>密码</th>
+                    <th>状态</th>
+                    <th>辅助邮箱</th>
+                    <th>辅助电话</th>
+                    <th>别名</th>
+                    <th>备注</th>
+                    <th>操作者</th>
+                    <th>时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="tbl-history">
+                <tr>
+                    <td colspan="11" class="muted">加载中...</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row mt">
+            <div class="field"><label>恢复备注（note）</label><input id="m-note" type="text"
+                                                                   placeholder="例如：回滚到稳定版本"/></div>
+            <div class="field"><label>操作者（created_by）</label><input id="m-who" type="text" placeholder="ops"/></div>
+        </div>
+    </div>
+</div>
+
+<!-- 新增弹窗（单个 + 批量上传：前端解析） -->
+<div id="modal-create" class="modal-backdrop">
+    <div class="modal">
+        <div class="flex" style="justify-content:space-between; align-items:center;">
+            <h3 style="margin:0; font-size:16px;">新增账号</h3>
+            <button class="secondary" id="btn-close-create">关闭</button>
+        </div>
+
+        <div class="tabs">
+            <div id="tab-single" class="tab active">单个新增</div>
+            <div id="tab-batch" class="tab">批量上传</div>
+        </div>
+
+        <div id="panel-single">
+            <div class="grid2">
+                <div class="field"><label>邮箱</label><input id="c-email" type="text" placeholder="必填"/></div>
+                <div class="field"><label>密码</label><input id="c-password" type="text" placeholder="必填"/></div>
+            </div>
+            <div class="grid2 mt">
+                <div class="field"><label>状态</label>
+                    <select id="c-status">
+                        <option value="normal">normal</option>
+                        <option value="banned">banned</option>
+                        <option value="disabled">disabled</option>
+                    </select>
+                </div>
+                <div class="field"><label>操作者（created_by）</label>
+                    <input id="c-who" type="text" placeholder="admin/ops（可选）"/>
+                </div>
+            </div>
+            <div class="grid2 mt">
+                <div class="field"><label>姓名（可选）</label>
+                    <input id="c-username" type="text" placeholder="张三"/>
+                </div>
+                <div class="field"><label>生日（可选）</label>
+                    <input id="c-birthday" type="date" placeholder="YYYY-MM-DD"/>
+                </div>
+            </div>
+            <div class="grid2 mt">
+                <div class="field"><label>辅助邮箱（换行或逗号分隔）</label>
+                    <textarea id="c-rec-emails" placeholder="a@b.com, c@d.com"></textarea>
+                </div>
+                <div class="field"><label>辅助电话（换行或逗号分隔）</label>
+                    <textarea id="c-rec-phones" placeholder="+86-138..., +1-202..."></textarea>
+                </div>
+            </div>
+            <div class="grid2 mt">
+                <div class="field"><label>别名（换行或逗号、分号分隔；将统一转为小写）</label>
+                    <textarea id="c-aliases" placeholder="alias1; alias2"></textarea>
+                </div>
+            </div>
+            <div class="field mt">
+                <label>备注（note）</label>
+                <input id="c-note" type="text" value="初始导入"/>
+            </div>
+            <div class="mt">
+                <button id="btn-create">创建</button>
+            </div>
+        </div>
+
+        <div id="panel-batch" class="hidden">
+            <div class="card" style="border:none; padding:0;">
+                <div class="field">
+                    <label>选择 .csv 或 .txt 文件（前端解析）</label>
+                    <input id="u-file" type="file" accept=".csv,.txt"/>
+                </div>
+                <div class="row mt">
+                    <button id="btn-parse-file" class="secondary">解析文件</button>
+                    <button id="btn-import-file" disabled>开始导入</button>
+                    <span id="u-summary" class="muted">未加载</span>
+                </div>
+                <div class="mt">
+                    <details>
+                        <summary class="muted">文件格式说明（点击展开）</summary>
+                        <div class="mt">
+                            <div class="muted">CSV 首行字段（包含表头）：</div>
+                            <div class="mono">
+                                email,password,status,username,birthday,recovery_emails,recovery_phones,aliases,note,created_by
+                            </div>
+                            <ul class="muted">
+                                <li>email,password 必填；status 可选（normal/banned/disabled，默认 normal）</li>
+                                <li>username,birthday 可选；birthday 推荐 YYYY-MM-DD</li>
+                                <li>recovery_emails、recovery_phones 使用分号 ; 分隔多个值</li>
+                            </ul>
+                            <pre class="mono"
+                                 style="white-space:pre-wrap;background:#f8fafc;border:1px solid #e5e7eb;padding:8px;border-radius:8px;">
+email,password,status,username,birthday,recovery_emails,recovery_phones,aliases,note,created_by
+u1@example.com,p@ss,normal,小王,1990-01-02,a1@ex.com;a2@ex.com,+86-1380000; +1-202-555-0123,alias_a;alias_b,首批导入,admin
+u2@gmail.com,p2,banned,,,backup@gmail.com,,备用1;备用2,风险控制,ops
+</pre>
+                        </div>
+                    </details>
+                </div>
+                <div id="u-preview" class="mt muted">未解析</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 删除确认弹窗（单个） -->
+<div id="modal-delete" class="modal-backdrop">
+    <div class="modal">
+        <h3 style="margin:0;">删除确认</h3>
+        <p class="muted">即将删除账号及其历史记录，此操作不可撤销。</p>
+        <p>账号 ID：<span id="del-id" class="code"></span>，邮箱：<span id="del-email" class="code"></span></p>
+        <div class="field"><label>请输入 delete 确认</label><input id="del-confirm" type="text" placeholder="delete"/>
+        </div>
+        <div class="row mt">
+            <button id="btn-delete-confirm" class="warn" disabled>删除</button>
+            <button id="btn-delete-cancel" class="secondary">取消</button>
+        </div>
+    </div>
+</div>
+
+<!-- 批量删除确认弹窗 -->
+<div id="modal-batch-del" class="modal-backdrop">
+    <div class="modal">
+        <h3 style="margin:0;">批量删除确认</h3>
+        <p class="muted">将删除选中的账号（含历史），不可撤销。</p>
+        <p>已选数量：<b id="bd-count">0</b></p>
+        <div class="field"><label>请输入 delete 确认</label><input id="bd-confirm" type="text" placeholder="delete"/>
+        </div>
+        <div class="row mt">
+            <button id="btn-bd-confirm" class="warn" disabled>删除</button>
+            <button id="btn-bd-cancel" class="secondary">取消</button>
+        </div>
+    </div>
+</div>
+
+<!-- 导出字段选择弹窗 -->
+<div id="modal-export" class="modal-backdrop">
+    <div class="modal">
+        <div class="flex" style="justify-content:space-between; align-items:center;">
+            <h3 style="margin:0; font-size:16px;">导出字段选择</h3>
+            <button class="secondary" id="btn-export-cancel">关闭</button>
+        </div>
+        <div class="muted">说明：若选中了列表中的多条记录，将优先导出所选记录；否则导出当前搜索结果的全部记录。</div>
+        <div class="mt">
+            <div class="flex" style="gap:12px; align-items:center;">
+                <button class="secondary" id="exp-select-all">全选</button>
+                <button class="secondary" id="exp-invert">反选</button>
+            </div>
+            <div class="checks-grid mt" id="exp-fields"
+                 style="display:grid; grid-template-columns: repeat(3, minmax(160px, 1fr)); gap:8px 16px;">
+                <label><input type="checkbox" class="exp-field" data-field="id" checked/> id</label>
+                <label><input type="checkbox" class="exp-field" data-field="email" checked/> email</label>
+                <label><input type="checkbox" class="exp-field" data-field="username" checked/> username</label>
+                <label><input type="checkbox" class="exp-field" data-field="birthday" checked/> birthday</label>
+                <label><input type="checkbox" class="exp-field" data-field="password" checked/> password</label>
+                <label><input type="checkbox" class="exp-field" data-field="status" checked/> status</label>
+                <label><input type="checkbox" class="exp-field" data-field="version" checked/> version</label>
+                <label><input type="checkbox" class="exp-field" data-field="created_at" checked/> created_at</label>
+                <label><input type="checkbox" class="exp-field" data-field="updated_at" checked/> updated_at</label>
+                <label><input type="checkbox" class="exp-field" data-field="recovery_emails" checked/>
+                    recovery_emails</label>
+                <label><input type="checkbox" class="exp-field" data-field="recovery_phones" checked/>
+                    recovery_phones</label>
+            </div>
+        </div>
+        <div class="row mt" style="justify-content:flex-end;">
+            <button id="btn-export-confirm">导出为 CSV</button>
+        </div>
+    </div>
+</div>
+
+<!-- 查看邮件弹窗（左列表 + 右预览） -->
+<div id="modal-mails" class="modal-backdrop">
+    <div class="modal" style="max-width:1100px;">
+        <div class="flex" style="justify-content:space-between; align-items:center;">
+            <h3 style="margin:0;">查看邮件</h3>
+            <button class="secondary" id="btn-close-mails">关闭</button>
+        </div>
+
+        <div class="mails-layout mt">
+            <!-- 左侧：邮件列表 -->
+            <div class="mails-left">
+                <div class="mails-toolbar">
+                    <div class="field">
+                        <label>搜索</label>
+                        <input id="mails-q" type="text" placeholder="主题/发件人/收件人 包含"/>
+                    </div>
+                    <div class="field">
+                        <label>文件夹</label>
+                        <input id="mails-folder" type="text" placeholder="INBOX（可选）"/>
+                    </div>
+                    <div class="field" style="align-self:flex-end;">
+                        <button id="mails-btn-search">搜索</button>
+                        <button id="mails-btn-reset" class="secondary">重置</button>
+                    </div>
+                </div>
+                <div style="overflow:auto; max-height:50vh;">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>主题</th>
+                            <th>发件人</th>
+                            <th>时间</th>
+                        </tr>
+                        </thead>
+                        <tbody id="mails-tbody">
+                        <tr>
+                            <td colspan="3" class="muted">暂无数据</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination mt">
+                    <button id="mails-btn-prev" class="secondary">上一页</button>
+                    <span id="mails-pg-info" class="muted">第 1/1 页</span>
+                    <button id="mails-btn-next" class="secondary">下一页</button>
+                    <span class="muted">每页</span>
+                    <select id="mails-pg-size">
+                        <option>20</option>
+                        <option selected>50</option>
+                        <option>100</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 右侧：预览 -->
+            <div class="mails-right">
+                <div class="mails-preview-head">
+                    <div id="mails-view-subject" class="mails-subject">（选择左侧一封邮件以预览）</div>
+                    <div class="mails-meta">
+                        <span id="mails-view-from" class="code"></span>
+                        <span id="mails-view-time" style="margin-left:10px;"></span>
+                        <span id="mails-view-folder" style="margin-left:10px;"></span>
+                        <span id="mails-view-labels" style="margin-left:10px;"></span>
+                    </div>
+                    <div id="mails-view-attach" class="mails-attach"></div>
+                </div>
+                <div id="mails-view-body" class="mails-body">
+                    <div id="mails-view-body-html" class="hidden"></div>
+                    <pre id="mails-view-body-plain" class="hidden" style="white-space:pre-wrap;"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 外部脚本 -->
+<script src="app.js" defer></script>
+</body>
+</html>

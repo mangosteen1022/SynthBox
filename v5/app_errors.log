@@ -1,0 +1,663 @@
+Windows fatal exception: code 0x80010108
+
+Thread 0x00004db0 (most recent call first):
+  <no Python frame>
+Windows fatal exception: code 0x8001010d
+
+Current thread 0x00009fa4 (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v2\main.py", line 433 in <module>
+Windows fatal exception: code 0x80010108
+
+Thread 0x0000418c (most recent call first):
+  <no Python frame>
+Windows fatal exception: code 0x80010108
+
+Thread 0x0000a4e8 (most recent call first):
+  <no Python frame>
+Windows fatal exception: code 0x80010108
+
+Thread 0x00001908 (most recent call first):
+  <no Python frame>
+Windows fatal exception: code 0x80010108
+
+Thread 0x00009640 (most recent call first):
+  <no Python frame>
+Windows fatal exception: code 0x8001010d
+
+Thread 0x00008ba4 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\multiprocessing\connection.py", line 1016 in _exhaustive_wait
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\multiprocessing\connection.py", line 1084 in wait
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\multiprocessing\connection.py", line 346 in _poll
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\multiprocessing\connection.py", line 257 in poll
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\multiprocessing\queues.py", line 113 in get
+  File "C:\Users\Administrator\Desktop\SynthBox\v2\core\proxy.py", line 208 in run
+
+Current thread 0x00007b98 (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v2\main.py", line 479 in <module>
+Windows fatal exception: code 0x8001010d
+
+Current thread 0x0000326c (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v2\main.py", line 479 in <module>
+Windows fatal exception: code 0x8001010d
+
+Current thread 0x0001b020 (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v2\main.py", line 480 in <module>
+Windows fatal exception: code 0x80010108
+
+Thread 0x0001b654 (most recent call first):
+  <no Python frame>
+Windows fatal exception: code 0x8001010d
+
+Current thread 0x0001dc24 (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v2\layout\ExportDialog.py", line 120 in getMultiExportSettings
+  File "C:\Users\Administrator\Desktop\SynthBox\v2\pages\people_page.py", line 97 in export_query_result
+  File "C:\Users\Administrator\Desktop\SynthBox\v2\main.py", line 480 in <module>
+Windows fatal exception: access violation
+
+Current thread 0x0001aca0 (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v2\main.py", line 53 in global_exception_hook
+
+Thread 0x0001adc4 (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v2\main.py", line 480 in <module>
+Windows fatal exception: code 0x8001010d
+
+Current thread 0x00001b24 (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v2\main.py", line 480 in <module>
+Windows fatal exception: code 0x8001010d
+
+Current thread 0x0001e060 (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v2\main.py", line 480 in <module>
+Windows fatal exception: code 0x80010108
+
+Thread 0x00005a20 (most recent call first):
+  <no Python frame>
+Windows fatal exception: code 0x8001010d
+
+Current thread 0x00000cb0 (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v3\main.py", line 480 in <module>
+Windows fatal exception: access violation
+
+Current thread 0x000076a4 (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\page.py", line 384 in on_login_error
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\page.py", line 345 in <lambda>
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\main.py", line 480 in <module>
+Windows fatal exception: code 0x8001010d
+
+Thread 0x00004574 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 355 in wait
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\queue.py", line 171 in get
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\anyio\_backends\_asyncio.py", line 994 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00007438 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 355 in wait
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\queue.py", line 171 in get
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\anyio\_backends\_asyncio.py", line 994 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00007b28 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 774 in _poll
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 445 in select
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 1948 in _run_once
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 641 in run_forever
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 322 in run_forever
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 674 in run_until_complete
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\runners.py", line 118 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\runners.py", line 194 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\uvicorn\server.py", line 67 in run
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\worker.py", line 620 in run
+
+Current thread 0x0000690c (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\main.py", line 480 in <module>
+Windows fatal exception: code 0x8001010d
+
+Thread 0x00006bd8 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 355 in wait
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\queue.py", line 171 in get
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\anyio\_backends\_asyncio.py", line 994 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00007f2c (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000060d8 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00007a18 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000043fc (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00002324 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00005a34 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00006900 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00005410 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x0000091c (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00006544 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\curl_cffi\curl.py", line 362 in perform
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\curl_cffi\requests\session.py", line 640 in request
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\curl_cffi\requests\session.py", line 664 in post
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 470 in parsing_account_status
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\retrying.py", line 273 in call
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\retrying.py", line 55 in wrapped_f
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1500 in analysis_process
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1405 in update_procedure
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1550 in analysis_process
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1295 in confirm_procedure
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1544 in analysis_process
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1295 in confirm_procedure
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1544 in analysis_process
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1295 in confirm_procedure
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1544 in analysis_process
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1295 in confirm_procedure
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1544 in analysis_process
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1295 in confirm_procedure
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1544 in analysis_process
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1570 in submit
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1576 in run
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\msal_client.py", line 127 in acquire_token_by_automation
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\worker.py", line 422 in execute
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\worker.py", line 528 in _run_task
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 58 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 92 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000008a0 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00006a78 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000072ec (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00005ec4 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000056b0 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000062f4 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\socket.py", line 720 in readinto
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\http\client.py", line 292 in _read_status
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\http\client.py", line 331 in begin
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\http\client.py", line 1428 in getresponse
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\urllib3\connectionpool.py", line 463 in _make_request
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\urllib3\connectionpool.py", line 716 in urlopen
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\requests\adapters.py", line 667 in send
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\requests\sessions.py", line 703 in send
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\requests\sessions.py", line 265 in resolve_redirects
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\requests\sessions.py", line 724 in send
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\requests\sessions.py", line 589 in request
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\requests\api.py", line 59 in request
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\requests\api.py", line 73 in get
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\core\EmailClientByApi.py", line 28 in _get_email_by_subject_and_recipient
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\core\EmailClientByApi.py", line 55 in get_email_by_subject_and_recipient
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 173 in _get_email_code
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\core\utils.py", line 77 in wrap
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 158 in fetch_code
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 164 in get_email_code
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1282 in confirm_procedure
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1544 in analysis_process
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1570 in submit
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1576 in run
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\msal_client.py", line 127 in acquire_token_by_automation
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\worker.py", line 422 in execute
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\worker.py", line 528 in _run_task
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 58 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 92 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00005cc0 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x0000657c (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00001420 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000060a0 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x0000318c (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 161 in fetch_code
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 164 in get_email_code
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1282 in confirm_procedure
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1544 in analysis_process
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1295 in confirm_procedure
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1544 in analysis_process
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1295 in confirm_procedure
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1544 in analysis_process
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1570 in submit
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1576 in run
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\msal_client.py", line 127 in acquire_token_by_automation
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\worker.py", line 422 in execute
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\worker.py", line 528 in _run_task
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 58 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 92 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00004610 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00001450 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00006108 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00005610 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000055a0 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00007aa0 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\socket.py", line 720 in readinto
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\http\client.py", line 292 in _read_status
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\http\client.py", line 331 in begin
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\http\client.py", line 1428 in getresponse
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\urllib3\connectionpool.py", line 463 in _make_request
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\urllib3\connectionpool.py", line 716 in urlopen
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\requests\adapters.py", line 667 in send
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\requests\sessions.py", line 703 in send
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\requests\sessions.py", line 589 in request
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\requests\api.py", line 59 in request
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\requests\api.py", line 73 in get
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\core\EmailClientByApi.py", line 28 in _get_email_by_subject_and_recipient
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\core\EmailClientByApi.py", line 55 in get_email_by_subject_and_recipient
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 173 in _get_email_code
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\core\utils.py", line 77 in wrap
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 158 in fetch_code
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 164 in get_email_code
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1282 in confirm_procedure
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1544 in analysis_process
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1570 in submit
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\auto_mation.py", line 1576 in run
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\msal_client.py", line 127 in acquire_token_by_automation
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\worker.py", line 422 in execute
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\worker.py", line 528 in _run_task
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 58 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 92 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00002da8 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000024f4 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00006958 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000016f4 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00005514 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000068cc (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000017d8 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00002ce4 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00007668 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00005e94 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00007dc4 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00007bd4 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00007c40 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00006c08 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000010e8 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00007580 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00004210 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000012f8 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000059e0 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00002f60 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00005900 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00005c64 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00005698 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x0000358c (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 774 in _poll
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 445 in select
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 1948 in _run_once
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 641 in run_forever
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 322 in run_forever
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 674 in run_until_complete
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\runners.py", line 118 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\runners.py", line 194 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\uvicorn\server.py", line 67 in run
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\worker.py", line 620 in run
+
+Current thread 0x00007968 (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\main.py", line 480 in <module>
+Windows fatal exception: code 0x8001010d
+
+Thread 0x0000929c (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000097e4 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 355 in wait
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\queue.py", line 171 in get
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\anyio\_backends\_asyncio.py", line 994 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00006358 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 774 in _poll
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 445 in select
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 1948 in _run_once
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 641 in run_forever
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 322 in run_forever
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 674 in run_until_complete
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\runners.py", line 118 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\runners.py", line 194 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\uvicorn\server.py", line 67 in run
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\outlook\worker.py", line 620 in run
+
+Current thread 0x00008aec (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\main.py", line 480 in <module>
+Windows fatal exception: code 0x8001010d
+
+Thread 0x00007414 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 355 in wait
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\queue.py", line 171 in get
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\anyio\_backends\_asyncio.py", line 994 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00007df8 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00001224 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 355 in wait
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\queue.py", line 171 in get
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\anyio\_backends\_asyncio.py", line 994 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x0000c5cc (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 774 in _poll
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 445 in select
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 1948 in _run_once
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 641 in run_forever
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 322 in run_forever
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 674 in run_until_complete
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\runners.py", line 118 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\runners.py", line 194 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\uvicorn\server.py", line 67 in run
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\new_outlook\services\server_thread.py", line 45 in run
+
+Current thread 0x000043fc (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\main.py", line 480 in <module>
+Windows fatal exception: code 0x8001010d
+
+Thread 0x00005110 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 355 in wait
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\queue.py", line 171 in get
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\anyio\_backends\_asyncio.py", line 994 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00007630 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 355 in wait
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\queue.py", line 171 in get
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\anyio\_backends\_asyncio.py", line 994 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00003dc0 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x0000c028 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000079d4 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 774 in _poll
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 445 in select
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 1948 in _run_once
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 641 in run_forever
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 322 in run_forever
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 674 in run_until_complete
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\runners.py", line 118 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\runners.py", line 194 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\uvicorn\server.py", line 67 in run
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\new_outlook\services\server_thread.py", line 45 in run
+
+Current thread 0x0000cd54 (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\main.py", line 480 in <module>
+Windows fatal exception: code 0x8001010d
+
+Thread 0x00009c10 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 355 in wait
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\queue.py", line 171 in get
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\anyio\_backends\_asyncio.py", line 994 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000048e4 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\concurrent\futures\thread.py", line 89 in _worker
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1012 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000075b4 (most recent call first):
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 774 in _poll
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 445 in select
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 1948 in _run_once
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 641 in run_forever
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\windows_events.py", line 322 in run_forever
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\base_events.py", line 674 in run_until_complete
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\runners.py", line 118 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\asyncio\runners.py", line 194 in run
+  File "C:\Users\Administrator\.conda\envs\m3\Lib\site-packages\uvicorn\server.py", line 67 in run
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\pages\new_outlook\services\server_thread.py", line 45 in run
+
+Current thread 0x00008aa0 (most recent call first):
+  File "C:\Users\Administrator\Desktop\SynthBox\v4\main.py", line 480 in <module>
